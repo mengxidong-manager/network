@@ -63,6 +63,8 @@ Idle → Connect → Active → OpenSent → OpenConfirm → Established
 
 拓扑：R1、R2 同属 **AS 65001**（之间跑 iBGP），R2 与 R3 之间是 **eBGP**（跨 AS 65001/65002），R3 与 R4 之间又是一段 **eBGP**（跨 AS 65002/65003）。
 
+![BGP 多自治系统拓扑](images/03-bgp.svg)
+
 ```
    [AS 65001]                    [AS 65002]      [AS 65003]
 
