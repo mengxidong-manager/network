@@ -78,7 +78,7 @@ route-map ADD-COMM permit 10
 
 ## 四、扩展团体与大团体（了解）
 
-- **扩展团体（Extended Community）**：64 位，结构化，主要用于 MPLS L3VPN（如 Route-Target 控制 VPN 路由的导入导出）。
+- **扩展团体（Extended Community）**：64 位，结构化，主要用于 MPLS L3VPN（如 Route-Target 控制 VPN 路由的导入导出，参见 [08-MPLS-L3VPN.md](08-MPLS-L3VPN.md)）。
 - **大团体（Large Community，RFC 8092）**：96 位、分三段 `AA:BB:CC`，为 32 位 ASN 时代设计——传统 `AA:NN` 的 AS 段放不下 32 位 ASN，大团体解决了这个问题。
 
 ## 五、验证命令
@@ -94,4 +94,4 @@ show route-map                          # 检查 route-map 逻辑
 
 ---
 
-[← 上一篇：BGP 路由反射器](06-路由反射器.md) · [返回目录](README.md)
+[← 上一篇：BGP 路由反射器](06-路由反射器.md) · [返回目录](README.md) · [下一篇：MPLS L3VPN →](08-MPLS-L3VPN.md)
