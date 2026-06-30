@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 230" width="720" height="230" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="720" height="230" fill="#ffffff"/>
+<rect x="60" y="118" width="600" height="74" rx="10" fill="none" stroke="#0d9488" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="360" y="212" text-anchor="middle" font-size="11" fill="#0d9488">AS 65001（双归出口）</text>
+<rect x="70" y="24" width="150" height="52" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="145" y="46" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">ISP-A</text>
+<text x="145" y="64" text-anchor="middle" font-size="10" fill="#4b5563">AS 65100</text>
+<rect x="500" y="24" width="150" height="52" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+<text x="575" y="46" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">ISP-B</text>
+<text x="575" y="64" text-anchor="middle" font-size="10" fill="#4b5563">AS 65200</text>
+<rect x="70" y="128" width="150" height="52" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+<text x="145" y="150" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">R1</text>
+<text x="145" y="168" text-anchor="middle" font-size="10" fill="#4b5563">主用边界</text>
+<rect x="500" y="128" width="150" height="52" rx="8" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/>
+<text x="575" y="150" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">R2</text>
+<text x="575" y="168" text-anchor="middle" font-size="10" fill="#4b5563">备用边界</text>
+<line x1="145" y1="76" x2="145" y2="128" stroke="#16a34a" stroke-width="2.5"/>
+<text x="152" y="106" text-anchor="start" font-size="10" fill="#16a34a">eBGP 主用</text>
+<line x1="575" y1="76" x2="575" y2="128" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="568" y="106" text-anchor="end" font-size="10" fill="#6b7280">eBGP 备用</text>
+<line x1="220" y1="154" x2="500" y2="154" stroke="#9ca3af" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="360" y="148" text-anchor="middle" font-size="10" fill="#4b5563">iBGP</text>
+<text x="145" y="20" text-anchor="middle" font-size="10" fill="#374151">出方向 LOCAL_PREF 200</text>
+<text x="575" y="20" text-anchor="middle" font-size="10" fill="#374151">入方向 AS-PATH prepend</text>
+</svg>
