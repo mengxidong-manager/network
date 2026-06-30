@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 290" width="720" height="290" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs>
+<marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M1 1 L9 5 L1 9" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="720" height="290" fill="#ffffff"/>
+<text x="360" y="22" text-anchor="middle" font-size="12" fill="#4b5563">route-map 自上而下匹配：命中即执行 set 并停止；未命中下沉到下一条</text>
+<rect x="130" y="38" width="460" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="360" y="58" text-anchor="middle" font-size="12" font-weight="600" fill="#111827">seq 10 permit</text>
+<text x="360" y="75" text-anchor="middle" font-size="11" fill="#4b5563">match prefix-list AGG → set community 65001:100</text>
+<rect x="130" y="106" width="460" height="46" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+<text x="360" y="126" text-anchor="middle" font-size="12" font-weight="600" fill="#111827">seq 20 permit</text>
+<text x="360" y="143" text-anchor="middle" font-size="11" fill="#4b5563">match community CUST → set local-preference 200</text>
+<rect x="130" y="174" width="460" height="46" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="360" y="194" text-anchor="middle" font-size="12" font-weight="600" fill="#111827">seq 30 deny</text>
+<text x="360" y="211" text-anchor="middle" font-size="11" fill="#4b5563">match prefix-list BOGON（丢弃非法前缀）</text>
+<rect x="130" y="242" width="460" height="40" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="360" y="266" text-anchor="middle" font-size="11" fill="#6b7280">末尾隐式 deny：未匹配的路由全部被丢弃（须自行补 permit 放行）</text>
+<line x1="360" y1="84" x2="360" y2="106" stroke="#6b7280" stroke-width="1.5" marker-end="url(#ah2)"/>
+<line x1="360" y1="152" x2="360" y2="174" stroke="#6b7280" stroke-width="1.5" marker-end="url(#ah2)"/>
+<line x1="360" y1="220" x2="360" y2="242" stroke="#6b7280" stroke-width="1.5" marker-end="url(#ah2)"/>
+</svg>
