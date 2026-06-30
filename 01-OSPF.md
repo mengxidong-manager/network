@@ -194,3 +194,7 @@ router ospf 1
 router ospf 1
  default-information originate
 ```
+
+---
+
+[返回目录](README.md) · [下一篇：IS-IS 协议 →](02-ISIS.md)
