@@ -11,6 +11,8 @@
 
 ## 二、拓扑
 
+![BGP 选路实验拓扑](images/09-bgp-lab.svg)
+
 ```
         ISP-A (AS 65100)              ISP-B (AS 65200)
              |                              |
@@ -89,4 +91,4 @@ WEIGHT 与 LOCAL_PREF 的区别：WEIGHT 只对配置它的那一台路由器生
 
 ---
 
-[← 上一篇：MPLS L3VPN](08-MPLS-L3VPN.md) · [返回目录](README.md)
+[← 上一篇：MPLS L3VPN](08-MPLS-L3VPN.md) · [返回目录](README.md) · [下一篇：MPLS L3VPN 进阶 →](10-MPLS-HubSpoke-Extranet.md)

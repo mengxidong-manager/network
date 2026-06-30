@@ -8,6 +8,8 @@
 
 团体属性是**可选、可传递**的——默认能跨 AS 传递，但思科设备**默认不发送团体属性**，必须显式开启 `send-community`。
 
+![团体属性流程](images/07-community.svg)
+
 ## 二、知名团体（Well-Known Communities）
 
 有几个预定义的团体值，所有厂商通用：
