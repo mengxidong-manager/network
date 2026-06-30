@@ -43,7 +43,7 @@ Idle → Connect → Active → OpenSent → OpenConfirm → Established
 - **MED（多出口区分符）**：告诉邻居 AS"从哪个入口进来更好"，值越小越优。
 - **ORIGIN**：路由来源（IGP < EGP < Incomplete，越靠前越优）。
 - **WEIGHT（权重）**：思科私有、只在本路由器本地有效、不传递，值越大越优，优先级最高。
-- **COMMUNITY（团体）**：给路由打的标签，用于成组地应用策略。
+- **COMMUNITY（团体）**：给路由打的标签，用于成组地应用策略（详见 [07-BGP团体属性.md](07-BGP团体属性.md)）。
 
 ### 最佳路径选择顺序（思科，简化）
 
@@ -57,7 +57,7 @@ Idle → Connect → Active → OpenSent → OpenConfirm → Established
 
 ### iBGP 水平分割与全互联
 
-重要规则：**从一个 iBGP 邻居学到的路由，不会再通告给另一个 iBGP 邻居**（防环机制，因为 AS 内部传递时 AS_PATH 不变）。后果是一个 AS 内所有 iBGP 路由器必须两两建立邻接，形成**全互联（full mesh）**，会话数按 n(n-1)/2 增长。解决办法是**路由反射器（Route Reflector）**或**联盟（Confederation）**。
+重要规则：**从一个 iBGP 邻居学到的路由，不会再通告给另一个 iBGP 邻居**（防环机制，因为 AS 内部传递时 AS_PATH 不变）。后果是一个 AS 内所有 iBGP 路由器必须两两建立邻接，形成**全互联（full mesh）**，会话数按 n(n-1)/2 增长。解决办法是**路由反射器（Route Reflector）**或**联盟（Confederation）**，详见 [06-路由反射器.md](06-路由反射器.md)。
 
 ## 三、配置实例（Cisco IOS）
 
@@ -168,3 +168,7 @@ show ip bgp 192.168.3.0      # 看某前缀的所有路径与属性
 ## 五、和 IGP 的本质区别
 
 IGP 在**一个 AS 内**自动发现邻居、追求**最短路径**、收敛快、规模有限；BGP 在 **AS 之间**手工建立邻居、按**策略和路径属性**选路、为承载全球几十万条路由而设计、强调稳定与可控胜过收敛速度。一句话——IGP 解决"在我家内部怎么走最快"，BGP 解决"我和其他人家之间，按什么规矩互通有无"。
+
+---
+
+[← 上一篇：IS-IS 协议](02-ISIS.md) · [返回目录](README.md) · [下一篇：IGP 与 BGP 结合实例 →](04-IGP-BGP-结合.md)
