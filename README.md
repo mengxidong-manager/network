@@ -26,6 +26,12 @@
 | 11 | BGP 的 BFD 快速故障检测 | [11-BGP-BFD.md](11-BGP-BFD.md) |
 | 12 | prefix-list 与 route-map 综合实战 | [12-prefix-list与route-map实战.md](12-prefix-list与route-map实战.md) |
 
+### 实战篇
+
+| 序号 | 主题 | 文件 |
+|---|---|---|
+| 13 | Cloudflare + Grafana 安全暴露配置 | [13-Cloudflare-Grafana安全暴露配置.md](13-Cloudflare-Grafana安全暴露配置.md) |
+
 ## 协议速查对比
 
 | 维度 | OSPF | IS-IS | BGP |
@@ -44,6 +50,8 @@
 先掌握一种 IGP（OSPF 最常见），理解"链路状态 + SPF + 区域分层"这套思路；再看 IS-IS，重点对比它与 OSPF 的差异（地址、分层、边界位置）；然后学 BGP，理解它"策略选路、AS 之间互联"的本质；第 4 篇把 IGP 与 BGP 串起来，理解真实网络中"IGP 管内部可达、BGP 管外部策略、靠递归查找衔接"的部署形态。
 
 打好基础后，进阶篇分别延伸到：IPv6（OSPFv3）、大规模 iBGP 的简化（路由反射器）、精细化策略控制（团体属性）、运营商多客户隔离方案（MPLS L3VPN）、把选路属性落到实操的动手实验（BGP 主备出口）；再进一步是 MPLS L3VPN 的非全互联拓扑设计（Hub-Spoke 与 Extranet 的 RT 设计）、亚秒级收敛（BGP 的 BFD 快速故障检测），以及路由策略的两大基础工具综合实战（prefix-list 与 route-map）。
+
+实战篇收录实际运维中的网络配置案例，如 Cloudflare CDN/WAF 结合业务服务的安全暴露方案。
 
 ## 许可
 
